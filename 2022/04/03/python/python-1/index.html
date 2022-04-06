@@ -16,15 +16,15 @@
   <meta name="author" content="ZZZty">
   <meta name="keywords" content="">
   
-    <meta name="description" content="python分支结构、循环结构、语言元素">
+    <meta name="description" content="python相关的基础知识">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python_1">
 <meta property="og:url" content="https://sokachzz.github.io/boker.github.io/2022/04/03/python/python-1/index.html">
 <meta property="og:site_name" content="sokach_zzz">
-<meta property="og:description" content="python分支结构、循环结构、语言元素">
+<meta property="og:description" content="python相关的基础知识">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-03T09:15:51.000Z">
-<meta property="article:modified_time" content="2022-04-03T09:20:48.639Z">
+<meta property="article:modified_time" content="2022-04-06T16:37:01.204Z">
 <meta property="article:author" content="ZZZty">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="python">
@@ -211,7 +211,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.4k 字
+          8.4k 字
         
       </span>
     
@@ -222,7 +222,7 @@
         
         
         
-          12 分钟
+          71 分钟
         
       </span>
     
@@ -264,14 +264,14 @@
             
             <div class="markdown-body">
               
-              <p>python分支结构、循环结构、语言元素</p>
+              <p>python相关的基础知识</p>
 <span id="more"></span>
 
-<h3 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h3><p>当然如果要构造出更多的分支，可以使用<code>if...elif...else...</code>结构或者嵌套的<code>if...else...</code>结构，下面的代码演示了如何利用多分支结构实现分段函数求值。</p>
+<h2 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h2><p>当然如果要构造出更多的分支，可以使用<code>if...elif...else...</code>结构或者嵌套的<code>if...else...</code>结构，下面的代码演示了如何利用多分支结构实现分段函数求值。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python">score = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;请输入成绩: &#x27;</span>))<br><span class="hljs-keyword">if</span> score &gt;= <span class="hljs-number">90</span>:<br>    grade = <span class="hljs-string">&#x27;A&#x27;</span><br><span class="hljs-keyword">elif</span> score &gt;= <span class="hljs-number">80</span>:<br>    grade = <span class="hljs-string">&#x27;B&#x27;</span><br><span class="hljs-keyword">elif</span> score &gt;= <span class="hljs-number">70</span>:<br>    grade = <span class="hljs-string">&#x27;C&#x27;</span><br><span class="hljs-keyword">elif</span> score &gt;= <span class="hljs-number">60</span>:<br>    grade = <span class="hljs-string">&#x27;D&#x27;</span><br><span class="hljs-keyword">else</span>:<br>    grade = <span class="hljs-string">&#x27;E&#x27;</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;对应的等级是:&#x27;</span>, grade)<br></code></pre></td></tr></table></figure>
 
 <p>每一个分支要有冒号，分支通过相同的缩进区别</p>
-<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><h4 id="for-in循环"><a href="#for-in循环" class="headerlink" title="for-in循环"></a>for-in循环</h4><p>如果明确的知道循环执行的次数或者要对一个容器进行迭代（后面会讲到），那么我们推荐使用<code>for-in</code>循环，例如下面代码中计算1~100求和的结果 </p>
+<h2 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h2><h4 id="for-in循环"><a href="#for-in循环" class="headerlink" title="for-in循环"></a>for-in循环</h4><p>如果明确的知道循环执行的次数或者要对一个容器进行迭代（后面会讲到），那么我们推荐使用<code>for-in</code>循环，例如下面代码中计算1~100求和的结果 </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-built_in">sum</span> = <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">101</span>):<br>    <span class="hljs-built_in">sum</span> += x<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">sum</span>)<br></code></pre></td></tr></table></figure>
 
 <p>需要说明的是上面代码中的<code>range(1, 101)</code>可以用来构造一个从1到100的范围，当我们把这样一个范围放到<code>for-in</code>循环中，就可以通过前面的循环变量<code>x</code>依次取出从1到100的整数。当然，<code>range</code>的用法非常灵活，下面给出了一个例子：</p>
@@ -282,7 +282,7 @@
 <li><code>range(100, 0, -2)</code>：可以用来产生100到1的偶数，其中-2是步长，即每次数字递减的值。</li>
 </ul>
 <h4 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h4><p>如果要构造不知道具体循环次数的循环结构，我们推荐使用<code>while</code>循环。<code>while</code>循环通过一个能够产生或转换出<code>bool</code>值的表达式来控制循环，表达式的值为<code>True</code>则继续循环；表达式的值为<code>False</code>则结束循环。</p>
-<h3 id="语言元素"><a href="#语言元素" class="headerlink" title="语言元素"></a>语言元素</h3><h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><p><code>and</code>、<code>or</code>和<code>not</code></p>
+<h2 id="语言元素"><a href="#语言元素" class="headerlink" title="语言元素"></a>语言元素</h2><h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><p><code>and</code>、<code>or</code>和<code>not</code></p>
 <h4 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h4><p><code>==</code>、<code>!=</code>、<code>&lt;</code>、<code>&gt;</code>、<code>&lt;=</code>、<code>&gt;=</code></p>
 <h4 id="整除符号"><a href="#整除符号" class="headerlink" title="整除符号"></a>整除符号</h4><p>//</p>
 <h4 id="输入输出的一些方法"><a href="#输入输出的一些方法" class="headerlink" title="输入输出的一些方法"></a>输入输出的一些方法</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">使用input()函数获取键盘输入(字符串)</span><br><span class="hljs-string">使用int()函数将输入的字符串转换成整数</span><br><span class="hljs-string">使用print()函数输出带占位符的字符串</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br>a = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;a = &#x27;</span>))<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;%d + %d = %d&#x27;</span> % (a, b, a + b))<br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;f:<span class="hljs-number">.1</span>f&#125;</span>华氏度 = <span class="hljs-subst">&#123;c:<span class="hljs-number">.1</span>f&#125;</span>摄氏度&#x27;</span>)<br></code></pre></td></tr></table></figure>
@@ -291,6 +291,157 @@
 
 <p>由于print函数会自动打出换行，所以如果不需要换行，在输出后多打一个end=’’</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">row = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;请输入行数: &#x27;</span>))<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(row):<br>    <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(i + <span class="hljs-number">1</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;*&#x27;</span>, end=<span class="hljs-string">&#x27;&#x27;</span>)<br>    <span class="hljs-built_in">print</span>()<br><br></code></pre></td></tr></table></figure>
+
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a><strong>函数</strong></h2><h3 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h3><p>在Python中可以使用<code>def</code>关键字来定义函数，和变量一样每个函数也有一个响亮的名字，而且命名规则跟变量的命名规则是一致的。在函数名后面的圆括号中可以放置传递给函数的参数，这一点和数学上的函数非常相似，程序中函数的参数就相当于是数学上说的函数的自变量，而函数执行完成后我们可以通过<code>return</code>关键字来返回一个值，这相当于数学上说的函数的因变量。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">函数名</span>（参数列表）:<br>    函数体<br>    <span class="hljs-keyword">return</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h3><p>在 python 中，类型属于对象，变量是没有类型的：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">a=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]<br>a=<span class="hljs-string">&quot;Runoob&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>以上代码中，**[1,2,3]** 是 List 类型，**”Runoob”** 是 String 类型，而变量 a 是没有类型，她仅仅是一个对象的引用（一个指针），可以是指向 List 类型对象，也可以是指向 String 类型对象。</p>
+<h3 id="可更改-mutable-与不可更改-immutable-对象"><a href="#可更改-mutable-与不可更改-immutable-对象" class="headerlink" title="可更改(mutable)与不可更改(immutable)对象"></a>可更改(mutable)与不可更改(immutable)对象</h3><p>在 python 中，strings, tuples, 和 numbers 是不可更改的对象，而 list,dict 等则是可以修改的对象。</p>
+<ul>
+<li><strong>不可变类型：</strong>变量赋值 <strong>a=5</strong> 后再赋值 <strong>a=10</strong>，这里实际是新生成一个 int 值对象 10，再让 a 指向它，而 5 被丢弃，不是改变 a 的值，相当于新生成了 a。</li>
+<li><strong>可变类型：</strong>变量赋值 <strong>la=[1,2,3,4]</strong> 后再赋值 <strong>la[2]=5</strong> 则是将 list la 的第三个元素值更改，本身la没有动，只是其内部的一部分值被修改了。</li>
+</ul>
+<p>python 函数的参数传递：</p>
+<ul>
+<li><strong>不可变类型：</strong>类似 C++ 的值传递，如整数、字符串、元组。如 fun(a)，传递的只是 a 的值，没有影响 a 对象本身。如果在 fun(a) 内部修改 a 的值，则是新生成一个 a 的对象。</li>
+<li><strong>可变类型：</strong>类似 C++ 的引用传递，如 列表，字典。如 fun(la)，则是将 la 真正的传过去，修改后 fun 外部的 la 也会受影响</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">change</span>(<span class="hljs-params">a</span>):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">id</span>(a))  <span class="hljs-comment"># 指向的是同一个对象</span><br>    a = <span class="hljs-number">10</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">id</span>(a))  <span class="hljs-comment"># 一个新对象</span><br><br>a = <span class="hljs-number">1</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">id</span>(a))<br>change(a)<br><span class="hljs-built_in">print</span>(a)<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">id</span>(a))<br><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">1706410993968</span><br><span class="hljs-string">1706410993968</span><br><span class="hljs-string">1706410994256</span><br><span class="hljs-string">1</span><br><span class="hljs-string">1706410993968</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python">对于不可变类型（对象）<br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">	变量仅仅是对一个对象的引用，可以类似的看作是一个指针，</span><br><span class="hljs-string">	它可以指向不同的对象，更改变量只是让这个指针指向不同的对象，并且不同的对象有不同的地址</span><br><span class="hljs-string">	可以看到，传递参数时，传递的只是a的值，并且在函数外部，该变量的值不会因为函数内部而改变</span><br><span class="hljs-string">	由于没有影响到这个对象本身，即此时还指向的是同一个对象，</span><br><span class="hljs-string">	所以他们对应的是同一个地址，此时修改a的值，则会生成一个新的对象被指向</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br>对于可变类型（对象）<br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">	在函数内部改变变量会影响到函数外部的值</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p>以下是调用函数时可使用的正式参数类型：</p>
+<ul>
+<li>必需参数</li>
+<li>关键字参数</li>
+<li>默认参数</li>
+<li>不定长参数</li>
+</ul>
+<h4 id="必需参数"><a href="#必需参数" class="headerlink" title="必需参数"></a>必需参数</h4><p>必需参数须以正确的顺序传入函数。调用时的数量必须和声明时的一样。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">printme</span>(<span class="hljs-params"> <span class="hljs-built_in">str</span> </span>):<br>   <span class="hljs-string">&#x27;&#x27;&#x27;打印任何传入的字符串&#x27;&#x27;&#x27;</span><br>   <span class="hljs-built_in">print</span> (<span class="hljs-built_in">str</span>)<br>   <span class="hljs-keyword">return</span><br> <br><span class="hljs-comment"># 调用 printme 函数，不加参数会报错</span><br>printme(<span class="hljs-string">&quot;im good&quot;</span>)<br>printme()<br></code></pre></td></tr></table></figure>
+
+<h4 id="关键字参数"><a href="#关键字参数" class="headerlink" title="关键字参数"></a>关键字参数</h4><p>关键字参数和函数调用关系紧密，函数调用使用关键字参数来确定传入的参数值。</p>
+<p>使用关键字参数允许函数调用时参数的顺序与声明时不一致，因为 Python 解释器能够用参数名匹配参数值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">printinfo</span>(<span class="hljs-params"> name, age </span>):<br>   <span class="hljs-string">&quot;打印任何传入的字符串&quot;</span><br>   <span class="hljs-built_in">print</span> (<span class="hljs-string">&quot;名字: &quot;</span>, name)<br>   <span class="hljs-built_in">print</span> (<span class="hljs-string">&quot;年龄: &quot;</span>, age)<br>   <span class="hljs-keyword">return</span><br> <br><span class="hljs-comment">#调用printinfo函数</span><br>printinfo( age=<span class="hljs-number">50</span>, name=<span class="hljs-string">&quot;runoob&quot;</span> )<br></code></pre></td></tr></table></figure>
+
+<p>可以看到这里并不需要参数调用顺序与参数声明顺序一致</p>
+<h4 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h4><p>调用函数时，如果没有传递参数，则会使用默认参数。以下实例中如果没有传入 age 参数，则使用默认值：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">printinfo</span>(<span class="hljs-params"> name, age = <span class="hljs-number">35</span> </span>):<br>   <span class="hljs-string">&quot;打印任何传入的字符串&quot;</span><br>   <span class="hljs-built_in">print</span> (<span class="hljs-string">&quot;名字: &quot;</span>, name)<br>   <span class="hljs-built_in">print</span> (<span class="hljs-string">&quot;年龄: &quot;</span>, age)<br>   <span class="hljs-keyword">return</span><br><br>printinfo( name=<span class="hljs-string">&quot;runoob&quot;</span> )<br></code></pre></td></tr></table></figure>
+
+<p>此时函数中默认其参数为age=35</p>
+<h4 id="不定长参数"><a href="#不定长参数" class="headerlink" title="不定长参数"></a>不定长参数</h4><p>你可能需要一个函数能处理比当初声明时更多的参数。这些参数叫做不定长参数，和上述 2 种参数不同，声明时不会命名。基本语法如下：</p>
+<p>第一个参数为普通的参数，第二个参数为不定长参数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">functionname</span>(<span class="hljs-params">[formal_args,] *var_args_tuple </span>):<br>   <span class="hljs-string">&quot;函数_文档字符串&quot;</span><br>   function_suite<br>   <span class="hljs-keyword">return</span> [expression]<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">printinfo</span>(<span class="hljs-params"> arg1, *vartuple </span>):<br>    <span class="hljs-string">&quot;打印任何传入的参数&quot;</span><br>    <span class="hljs-built_in">print</span> (<span class="hljs-string">&quot;输出: &quot;</span>)<br>    <span class="hljs-built_in">print</span> (arg1)<br>    <span class="hljs-built_in">print</span> (vartuple)<br>    <span class="hljs-comment"># 调用printinfo函数</span><br>    printinfo( <span class="hljs-number">70</span>, <span class="hljs-number">60</span>, <span class="hljs-number">50</span> )<br></code></pre></td></tr></table></figure>
+
+<p>加了星号 ***** 的参数会以元组(tuple)的形式导入，存放所有未命名的变量参数，默认将后几个参数存放到一个元组里面。不定长参数可以不传入</p>
+<p>还有一种就是参数带两个星号 ******基本语法如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">functionname</span>(<span class="hljs-params">[formal_args,] **var_args_dict </span>):<br>    <span class="hljs-string">&quot;函数_文档字符串&quot;</span><br>    function_suite<br>    <span class="hljs-keyword">return</span> [expression]<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">printinfo</span>(<span class="hljs-params"> arg1, **vardict </span>):<br>    <span class="hljs-string">&quot;打印任何传入的参数&quot;</span><br>    <span class="hljs-built_in">print</span> (<span class="hljs-string">&quot;输出: &quot;</span>)<br>    <span class="hljs-built_in">print</span> (arg1)<br>    <span class="hljs-built_in">print</span> (vardict)<br>    <span class="hljs-comment"># 调用printinfo</span><br>    函数printinfo(<span class="hljs-number">1</span>, a=<span class="hljs-number">2</span>,b=<span class="hljs-number">3</span>)<br>    <span class="hljs-string">&#x27;&#x27;&#x27;输出: 1&#123;&#x27;a&#x27;: 2, &#x27;b&#x27;: 3&#125;&#x27;&#x27;&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<p>声明函数时，参数中星号 ***** 可以单独出现，例如:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">f</span>(<span class="hljs-params">a,b,*,c</span>):<br>    <span class="hljs-keyword">return</span> a+b+c<br></code></pre></td></tr></table></figure>
+
+<p>如果单独出现星号 ***** 后的参数必须用关键字传入。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">f(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,c=<span class="hljs-number">3</span>)<br></code></pre></td></tr></table></figure>
+
+<h3 id="解决不同模块命名重复的方法"><a href="#解决不同模块命名重复的方法" class="headerlink" title="解决不同模块命名重复的方法"></a>解决不同模块命名重复的方法</h3><h4 id="1-用as取别名"><a href="#1-用as取别名" class="headerlink" title="1.用as取别名"></a>1.用as取别名</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> untils.foo <span class="hljs-keyword">import</span> say_hello <span class="hljs-keyword">as</span> s1<br><span class="hljs-keyword">from</span> untils.bar <span class="hljs-keyword">import</span> say_hello <span class="hljs-keyword">as</span> s2<br></code></pre></td></tr></table></figure>
+
+<h4 id="2-使用完全限定名"><a href="#2-使用完全限定名" class="headerlink" title="2.使用完全限定名"></a>2.使用完全限定名</h4><p>包名.模块名.函数名（包名可以省略）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> untils <span class="hljs-keyword">import</span> foo<br><span class="hljs-keyword">from</span> untils <span class="hljs-keyword">import</span> barfoo.say_hello()<br>bar.say_hello()<br>untils.foo.say_hello()<br></code></pre></td></tr></table></figure>
+
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="基本数据类型和运算"><a href="#基本数据类型和运算" class="headerlink" title="基本数据类型和运算"></a>基本数据类型和运算</h3><p>1.Python 中的变量不需要声明。每个变量在使用前都必须赋值，变量赋值以后该变量才会被创建。</p>
+<p>2.在 Python 中，变量就是变量，它没有类型，我们所说的”类型”是变量所指的内存中对象的类型。</p>
+<p>3.Python允许你同时为多个变量赋值</p>
+<p>例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">a=b=c=<span class="hljs-number">1</span>；<br>a，b，c=<span class="hljs-number">1</span>，<span class="hljs-number">2</span>，“lululu”；<br></code></pre></td></tr></table></figure>
+
+<p>4.一个变量可以通过赋值指向不同类型的对象</p>
+<p>5.数值的除法包含两个运算符：**/** 返回一个浮点数，**//** 返回一个整数</p>
+<p>6.在混合计算时，Python会把整型转换成为浮点数。</p>
+<h3 id="标准数据类型"><a href="#标准数据类型" class="headerlink" title="标准数据类型"></a>标准数据类型</h3><p>1.Python3 中有六个标准的数据类型：</p>
+<p>Number（数字），String（字符串），List（列表），Tuple（元组），Set（集合），Dictionary（字典）</p>
+<p>2.Python3 的六个标准数据类型中：</p>
+<p>不可变数据（3 个）：Number（数字）、String（字符串）、Tuple（元组）；</p>
+<p>可变数据（3 个）：List（列表）、Dictionary（字典）、Set（集合）</p>
+<h4 id="数字-Number-类型"><a href="#数字-Number-类型" class="headerlink" title="数字(Number)类型"></a>数字(Number)类型</h4><p>python中数字有四种类型：整数、布尔型、浮点数和复数。</p>
+<p>1.int (整数),  只有一种整数类型 int，表示为长整型</p>
+<p>2.bool (布尔), 如 True。</p>
+<p>3.float (浮点数), 如 1.23、3E-2</p>
+<p>4.complex (复数), 如 1 + 2j、 1.1 + 2.2j</p>
+<h4 id="字符串-String-类型"><a href="#字符串-String-类型" class="headerlink" title="字符串(String)类型"></a>字符串(String)类型</h4><p>1.python中单引号和双引号使用完全相同。</p>
+<p>2.使用三引号(‘’’ 或 “””)可以指定一个多行字符串。</p>
+<p>3.转义符 ,反斜杠可以用来转义，使用r可以让反斜杠不发生转义，也可以用ascii码和unicode字符编码表示字符</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">s1 = <span class="hljs-string">&#x27;\141\142\143\x61\x62\x63&#x27;</span><br><span class="hljs-comment">#abcabc</span><br>s2 = <span class="hljs-string">&#x27;\u9a86\u660a&#x27;</span><br><span class="hljs-comment">#骆昊</span><br><span class="hljs-string">r&quot;this is a line with \n&quot;</span><br><span class="hljs-comment">#\n会显示，并不是换行。</span><br></code></pre></td></tr></table></figure>
+
+<p>4.按字面意义级联字符串</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;this &quot;</span>,<span class="hljs-string">&quot;is &quot;</span>,<span class="hljs-string">&quot;string&quot;</span>)<br><span class="hljs-comment">#this is string。</span><br></code></pre></td></tr></table></figure>
+
+<p>字符串可以用 + 运算符连接在一起，用 * 运算符重复。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">s1 = <span class="hljs-string">&#x27;hello &#x27;</span> * <span class="hljs-number">3</span><br>s2 = <span class="hljs-string">&#x27;world&#x27;</span><br>s1 += s2<br><span class="hljs-built_in">print</span>(s1) <br><span class="hljs-comment"># hello hello hello world</span><br><br></code></pre></td></tr></table></figure>
+
+<p>5.可以使用<code>in</code>和<code>not in</code>来判断一个字符串是否包含另外一个字符串（成员运算）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-string">&#x27;ll&#x27;</span> <span class="hljs-keyword">in</span> s1 <span class="hljs-comment"># True</span><br><span class="hljs-string">&#x27;good&#x27;</span> <span class="hljs-keyword">in</span> s1 <span class="hljs-comment"># False</span><br></code></pre></td></tr></table></figure>
+
+<p>6.Python 没有单独的字符类型，一个字符就是长度为 1 的字符串。</p>
+<p>字符串的截取的语法格式如下：变量[头下标:尾下标:步长]</p>
+<p>尾下标指输出到该位置停止，并不输出该字符，输出的总长度为尾下标减去头下标    </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(str2[<span class="hljs-number">2</span>])<br><span class="hljs-built_in">print</span>(str2[<span class="hljs-number">2</span>::<span class="hljs-number">2</span>])<br><span class="hljs-built_in">print</span>(str2[-<span class="hljs-number">3</span>:-<span class="hljs-number">1</span>])<br><span class="hljs-comment">#输出倒数第三个到最后一个字符</span><br></code></pre></td></tr></table></figure>
+
+<p>7.Python 中的字符串有两种索引方式，从左往右以 0 开始，从右往左以 -1 开始。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span> (<span class="hljs-built_in">str</span> * <span class="hljs-number">2</span>)      <span class="hljs-comment"># 输出字符串两次，也可以写成 print (2 * str)</span><br><span class="hljs-built_in">print</span> (<span class="hljs-built_in">str</span> + <span class="hljs-string">&quot;TEST&quot;</span>) <span class="hljs-comment"># 连接字符串</span><br><span class="hljs-built_in">print</span> (<span class="hljs-built_in">str</span>[<span class="hljs-number">2</span>:<span class="hljs-number">5</span>])     <span class="hljs-comment"># 输出从第三个开始到第五个的字符</span><br></code></pre></td></tr></table></figure>
+
+<p>8.Python中的字符串不能改变。</p>
+<h4 id="List（列表）类型"><a href="#List（列表）类型" class="headerlink" title="List（列表）类型"></a>List（列表）类型</h4><p>1,列表类似于c语言中的数组，但其优点在于<strong>列表中的元素类型可以不同，它支持数字，字符串甚至可以包含列表（所谓嵌套）。</strong></p>
+<p>2,列表是写在方括号 <strong>[]</strong> 之间、用逗号分隔开的元素列表,多个列表之间可以用+相连接</p>
+<p>3,和字符串一样，列表同样可以被索引和截取，列表被<strong>截取后返回一个包含所需元素的新列表。</strong></p>
+<p>4,列表截取的语法格式如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">变量[头下标:尾下标：步长]<br></code></pre></td></tr></table></figure>
+
+<!--后两个可以省略，但是省略时要保留前面的冒号-->
+
+<p>当步长为负数时，表示逆向读取。可以用于翻转字符串</p>
+<p>5,列表的初始化实例如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">list</span> = [ <span class="hljs-string">&#x27;abcd&#x27;</span>, <span class="hljs-number">786</span> , <span class="hljs-number">2.23</span>, <span class="hljs-string">&#x27;runoob&#x27;</span>, <span class="hljs-number">70.2</span> ]<br>tinylist = [<span class="hljs-number">123</span>, <span class="hljs-string">&#x27;runoob&#x27;</span>]<br>list2 = [<span class="hljs-string">&#x27;hello&#x27;</span>] * <span class="hljs-number">3</span><br><span class="hljs-comment">#[&#x27;hello&#x27;,&#x27;hello&#x27;,&#x27;hello&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+<p>6,其输出与字符串类似，输出的结果仍然以一个列表的方式输出，<strong>与字符串不同的是，列表中的元素是可以改变的</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>a=[<span class="hljs-number">9</span>, <span class="hljs-number">2</span>, <span class="hljs-number">13</span>, <span class="hljs-number">14</span>, <span class="hljs-number">15</span>, <span class="hljs-number">6</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>a[<span class="hljs-number">2</span>:<span class="hljs-number">5</span>] = []   <span class="hljs-comment"># 将对应的元素值设置为 []</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>a<br>[<span class="hljs-number">9</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>]<br></code></pre></td></tr></table></figure>
+
+<p>7,遍历列表元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 通过循环用下标遍历列表元素</span><br><span class="hljs-keyword">for</span> index <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(list1)):<br>    <span class="hljs-built_in">print</span>(list1[index])<br><span class="hljs-comment"># 通过for循环遍历列表元素</span><br><span class="hljs-keyword">for</span> elem <span class="hljs-keyword">in</span> list1:<br>    <span class="hljs-built_in">print</span>(elem)<br><span class="hljs-comment"># 通过enumerate函数处理列表之后再遍历可以同时获得元素索引和值</span><br><span class="hljs-keyword">for</span> index, elem <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(list1):<br>    <span class="hljs-built_in">print</span>(index, elem)<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="Tuple（元组）类型"><a href="#Tuple（元组）类型" class="headerlink" title="Tuple（元组）类型"></a>Tuple（元组）类型</h4><p>元组（tuple）与列表类似，<strong>不同之处在于元组的元素不能修改</strong>。元组<strong>写在小括号 ()</strong> 里，元素之间用逗号隔开，元组中的元素类型也可以不相同：</p>
+<p>1.元组的初始化及输出：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">tuple</span> = ( <span class="hljs-string">&#x27;abcd&#x27;</span>, <span class="hljs-number">786</span> , <span class="hljs-number">2.23</span>, <span class="hljs-string">&#x27;runoob&#x27;</span>, <span class="hljs-number">70.2</span>  )<br><span class="hljs-built_in">print</span>(tulpe[<span class="hljs-number">3</span>:<span class="hljs-number">5</span>])<br></code></pre></td></tr></table></figure>
+
+<p>虽然元组的元素不能改变，但是能包含可变的对象，如list列表。</p>
+<p>2.构造包含 0 个或 1 个元素的元组比较特殊，所以有一些额外的语法规则：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">tup1 = ()    <span class="hljs-comment"># 空元组</span><br>tup2 = (<span class="hljs-number">20</span>,) <span class="hljs-comment"># 一个元素，需要在元素后添加逗号</span><br></code></pre></td></tr></table></figure>
+
+<p>3.string、list 和 tuple 都属于 sequence（序列）。</p>
+<p>4.元组的操作与列表基本相同。</p>
+<h4 id="Set（集合）类型"><a href="#Set（集合）类型" class="headerlink" title="Set（集合）类型"></a>Set（集合）类型</h4><p>1.集合（set）是由一个或数个形态各异的大小整体组成的，构成集合的事物或对象称作元素或是成员。</p>
+<p>基本功能是进行成员关系测试和删除重复元素。</p>
+<p>可以使用大括号 <strong>{ }</strong> 或者 <strong>set()</strong> 函数创建集合，注意：创建一个空集合必须用 <strong>set()</strong> 而不是 **{ }**，因为 <strong>{ }</strong> 是用来创建一个空字典。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">sites = &#123;<span class="hljs-string">&#x27;Google&#x27;</span>, <span class="hljs-string">&#x27;Taobao&#x27;</span>, <span class="hljs-string">&#x27;Runoob&#x27;</span>, <span class="hljs-string">&#x27;Facebook&#x27;</span>, <span class="hljs-string">&#x27;Zhihu&#x27;</span>, <span class="hljs-string">&#x27;Baidu&#x27;</span>&#125;<br><span class="hljs-built_in">set</span>(value)<br></code></pre></td></tr></table></figure>
+
+<p>2.功能：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python">a.输出集合，重复的元素被自动去掉<br><span class="hljs-built_in">print</span>(sites)   <br><br>b.成员测试<br><span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;Runoob&#x27;</span> <span class="hljs-keyword">in</span> sites :<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Runoob 在集合中&#x27;</span>)<br><br>c.<span class="hljs-built_in">set</span>可以进行集合运算<br>a = <span class="hljs-built_in">set</span>(<span class="hljs-string">&#x27;abracadabra&#x27;</span>)<br>b = <span class="hljs-built_in">set</span>(<span class="hljs-string">&#x27;alacazam&#x27;</span>)<br><span class="hljs-built_in">print</span>(a - b)     <span class="hljs-comment"># a 和 b 的差集</span><br><span class="hljs-built_in">print</span>(a | b)     <span class="hljs-comment"># a 和 b 的并集</span><br><span class="hljs-built_in">print</span>(a &amp; b)     <span class="hljs-comment"># a 和 b 的交集</span><br><span class="hljs-built_in">print</span>(a ^ b)     <span class="hljs-comment"># a 和 b 中不同时存在的元素</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="Dictionary（字典）类型"><a href="#Dictionary（字典）类型" class="headerlink" title="Dictionary（字典）类型"></a>Dictionary（字典）类型</h4><p>1.列表是有序的对象集合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取。</p>
+<p>2.字典是一种映射类型，类似于函数，一个自变量对应一个因变量，字典用 <strong>{ }</strong> 标识，它是一个无序的 <strong>键(key) : 值(value)</strong> 的集合。</p>
+<p>3.键(key)必须使用不可变类型，在同一个字典中，键(key)必须是唯一的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">dict</span> = &#123;&#125;    <span class="hljs-comment">#创建一个新的空字典</span><br><span class="hljs-built_in">dict</span>[<span class="hljs-string">&#x27;one&#x27;</span>] = <span class="hljs-string">&quot;1 - 菜鸟教程&quot;</span><br><span class="hljs-built_in">dict</span>[<span class="hljs-number">2</span>]     = <span class="hljs-string">&quot;2 - 菜鸟工具&quot;</span><br><br>tinydict = &#123;<span class="hljs-string">&#x27;name&#x27;</span>: <span class="hljs-string">&#x27;runoob&#x27;</span>,<span class="hljs-string">&#x27;code&#x27;</span>:<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;site&#x27;</span>: <span class="hljs-string">&#x27;www.runoob.com&#x27;</span>&#125;<br><br><span class="hljs-built_in">print</span> (<span class="hljs-built_in">dict</span>[<span class="hljs-string">&#x27;one&#x27;</span>])       <span class="hljs-comment"># 输出键为 &#x27;one&#x27; 的值</span><br><span class="hljs-built_in">print</span> (<span class="hljs-built_in">dict</span>[<span class="hljs-number">2</span>])           <span class="hljs-comment"># 输出键为 2 的值</span><br><span class="hljs-built_in">print</span> (tinydict)          <span class="hljs-comment"># 输出完整的字典</span><br><span class="hljs-built_in">print</span> (tinydict.keys())   <span class="hljs-comment"># 输出所有键</span><br><span class="hljs-built_in">print</span> (tinydict.values()) <span class="hljs-comment"># 输出所有值</span><br></code></pre></td></tr></table></figure>
+
+<p>4.构造函数 dict() 可以直接从键值对序列中构建字典如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">dict</span>([(<span class="hljs-string">&#x27;Runoob&#x27;</span>, <span class="hljs-number">1</span>), (<span class="hljs-string">&#x27;Google&#x27;</span>, <span class="hljs-number">2</span>), (<span class="hljs-string">&#x27;Taobao&#x27;</span>, <span class="hljs-number">3</span>)])<br>&#123;<span class="hljs-string">&#x27;Runoob&#x27;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;Google&#x27;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;Taobao&#x27;</span>: <span class="hljs-number">3</span>&#125;<br><span class="hljs-meta">&gt;&gt;&gt; </span>&#123;x: x**<span class="hljs-number">2</span> <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> (<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>)&#125;<br>&#123;<span class="hljs-number">2</span>: <span class="hljs-number">4</span>, <span class="hljs-number">4</span>: <span class="hljs-number">16</span>, <span class="hljs-number">6</span>: <span class="hljs-number">36</span>&#125;<br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">dict</span>(Runoob=<span class="hljs-number">1</span>, Google=<span class="hljs-number">2</span>, Taobao=<span class="hljs-number">3</span>)<br>&#123;<span class="hljs-string">&#x27;Runoob&#x27;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;Google&#x27;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;Taobao&#x27;</span>: <span class="hljs-number">3</span>&#125;<br>&gt;&gt;&gt;<br></code></pre></td></tr></table></figure>
 
 
               
@@ -381,9 +532,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/boker.github.io/2022/04/03/python/python-2/" title="python_2">
+                      <a href="/boker.github.io/2022/04/03/LoginApp/" title="LoginApp">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">python_2</span>
+                        <span class="hidden-mobile">LoginApp</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
