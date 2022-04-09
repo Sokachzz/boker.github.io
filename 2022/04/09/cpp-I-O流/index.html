@@ -16,22 +16,22 @@
   <meta name="author" content="ZZZty">
   <meta name="keywords" content="">
   
-    <meta name="description" content="C++动态分配二维数组的方法以及以及注意事项">
+    <meta name="description" content="c++_I&#x2F;O输入输出流相关知识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cpp_动态分配二维数组">
-<meta property="og:url" content="https://sokachzz.github.io/boker.github.io/2022/04/06/cpp/cpp-%E5%8A%A8%E6%80%81%E5%88%86%E9%85%8D%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/index.html">
+<meta property="og:title" content="cpp_I&#x2F;O流">
+<meta property="og:url" content="https://sokachzz.github.io/boker.github.io/2022/04/09/cpp-I-O%E6%B5%81/index.html">
 <meta property="og:site_name" content="sokach_zzz">
-<meta property="og:description" content="C++动态分配二维数组的方法以及以及注意事项">
+<meta property="og:description" content="c++_I&#x2F;O输入输出流相关知识">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-04-05T16:32:47.000Z">
-<meta property="article:modified_time" content="2022-04-05T16:58:37.003Z">
+<meta property="article:published_time" content="2022-04-09T04:18:44.000Z">
+<meta property="article:modified_time" content="2022-04-09T04:47:16.473Z">
 <meta property="article:author" content="ZZZty">
 <meta property="article:tag" content="c++">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>cpp_动态分配二维数组 - sokach_zzz</title>
+  <title>cpp_I/O流 - sokach_zzz</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -188,7 +188,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="cpp_动态分配二维数组"></span>
+            <span id="subtitle" data-typed-text="cpp_I/O流"></span>
           
         </div>
 
@@ -199,8 +199,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-04-06 00:32" pubdate>
-          2022年4月6日 凌晨
+        <time datetime="2022-04-09 12:18" pubdate>
+          2022年4月9日 中午
         </time>
       </span>
     
@@ -211,7 +211,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          462 字
+          592 字
         
       </span>
     
@@ -222,7 +222,7 @@
         
         
         
-          4 分钟
+          5 分钟
         
       </span>
     
@@ -260,20 +260,44 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">cpp_动态分配二维数组</h1>
+            <h1 style="display: none">cpp_I/O流</h1>
             
             <div class="markdown-body">
               
-              <p>C++动态分配二维数组的方法以及以及注意事项</p>
+              <p>c++_I/O输入输出流相关知识</p>
 <span id="more"></span>
 
+<h3 id="检验输入合法性"><a href="#检验输入合法性" class="headerlink" title="检验输入合法性"></a>检验输入合法性</h3><ul>
+<li><p>在使用cin将标准输入流输入到自己设定的变量时，可能会因为输入的类型与设定的变量类型不同而产生异常的返回值。</p>
+</li>
+<li><p>例如,假设我们有一个int型的变量x，而你的输入又是一个非整形时，cin&gt;&gt;x和x的值都将直接被赋为0。</p>
+</li>
+<li><p>因此，我们需要检验输入的合法性。这将通过：</p>
 <ul>
-<li><p>动态分配空间</p>
-<p>​    c++没有专门的动态分配二维数组的方法，但是我们知道的是，二维数组的实质其实就是一维的指针数组，这个数组的每个元素都是一个指针，这个指针及他后面的那一部分空间，就是二维数组中的一行。所以c++动态分配二维数组时，只要先分配出一个指针数组，然后再对这个指针数组中的每个指针分配空间即可。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">int</span>** p = <span class="hljs-keyword">new</span> <span class="hljs-type">int</span>*[<span class="hljs-number">10</span>];<br><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>; i&lt;<span class="hljs-number">10</span>; i++)&#123;<br>	p[i] = <span class="hljs-keyword">new</span> <span class="hljs-type">int</span>[<span class="hljs-number">8</span>];<br>&#125;<br><span class="hljs-comment">//这就分配了一个10*8的二维数组</span><br></code></pre></td></tr></table></figure></li>
-<li><p>释放空间</p>
-<p>​    释放空间时，如果直接释放指针p，那么就相当于只释放了每行第一个元素，后面元素所占用的空间并没有释放。所以应当先释放指针数组中每个指针所占空间，再释放这个指针数组。并且，由于仅仅释放空间会使这些指针成为野指针，释放完的指针我们应当将其赋值为NULL</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>; i&lt;<span class="hljs-number">10</span>; i++)&#123;<br>    <span class="hljs-keyword">delete</span> p[i];<br>    p[i] = null;<br>&#125;<br><span class="hljs-keyword">delete</span> []p;<br></code></pre></td></tr></table></figure></li>
+<li>cin.good()</li>
+<li>cin.clear()</li>
+<li>cin.ignore()</li>
+</ul>
+</li>
+<li><p>cin.good()</p>
+<ul>
+<li>cin.good()，原来的值默认为1。如果输入的值与定义的变量类型不同，则输出cin.good()为0。</li>
+<li>所以先用cin.good()检验你的输入类型是否相同</li>
+</ul>
+</li>
+<li><p>cin.clear()</p>
+<ul>
+<li>cin.clear(),用于修复输入流，使得你得输入能重新进行</li>
+</ul>
+</li>
+<li><p>cin.ignore(streamsize num=1, int delim=EOF)</p>
+<ul>
+<li>跳过输入流中n个字符，或在遇到指定的终止字符时提前结束（此时跳过包括终止字符在内的若干字符）。</li>
+<li>例如cin.ignore(1,’\n’)，跳过一个1个字节，或者遇到回车时结束。</li>
+</ul>
+</li>
+<li><p>实例：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs cpp">cin &gt;&gt; x;<br><span class="hljs-keyword">if</span> (!cin.<span class="hljs-built_in">good</span>()) &#123;<br>	cin.<span class="hljs-built_in">clear</span>();<br>	cin.<span class="hljs-built_in">ignore</span>(<span class="hljs-number">4</span>, <span class="hljs-string">&#x27;\n&#x27;</span>);<br>	cout &lt;&lt; <span class="hljs-string">&quot;输入不规范，请输入1-1000的整数&quot;</span> &lt;&lt; endl;<br>&#125;<br></code></pre></td></tr></table></figure></li>
 </ul>
 
               
@@ -321,8 +345,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>cpp_动态分配二维数组</div>
-      <div>https://sokachzz.github.io/boker.github.io/2022/04/06/cpp/cpp-动态分配二维数组/</div>
+      <div>cpp_I/O流</div>
+      <div>https://sokachzz.github.io/boker.github.io/2022/04/09/cpp-I-O流/</div>
     </div>
     <div class="license-meta">
       
@@ -334,7 +358,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年4月6日</div>
+          <div>2022年4月9日</div>
         </div>
       
       
@@ -364,18 +388,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/boker.github.io/2022/04/07/cpp/cpp-%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/" title="cpp_基础内容">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">cpp_基础内容</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/boker.github.io/2022/04/03/LoginApp/" title="LoginApp">
-                        <span class="hidden-mobile">LoginApp</span>
+                      <a href="/boker.github.io/2022/04/07/cpp/cpp-%E8%99%9A%E5%87%BD%E6%95%B0%E5%92%8C%E5%A4%9A%E6%80%81/" title="cpp_虚函数和多态">
+                        <span class="hidden-mobile">cpp_虚函数和多态</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

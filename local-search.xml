@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>cpp_I/O流</title>
+    <link href="/boker.github.io/2022/04/09/cpp-I-O%E6%B5%81/"/>
+    <url>/boker.github.io/2022/04/09/cpp-I-O%E6%B5%81/</url>
+    
+    <content type="html"><![CDATA[<p>c++_I/O输入输出流相关知识</p><span id="more"></span><h3 id="检验输入合法性"><a href="#检验输入合法性" class="headerlink" title="检验输入合法性"></a>检验输入合法性</h3><ul><li><p>在使用cin将标准输入流输入到自己设定的变量时，可能会因为输入的类型与设定的变量类型不同而产生异常的返回值。</p></li><li><p>例如,假设我们有一个int型的变量x，而你的输入又是一个非整形时，cin&gt;&gt;x和x的值都将直接被赋为0。</p></li><li><p>因此，我们需要检验输入的合法性。这将通过：</p><ul><li>cin.good()</li><li>cin.clear()</li><li>cin.ignore()</li></ul></li><li><p>cin.good()</p><ul><li>cin.good()，原来的值默认为1。如果输入的值与定义的变量类型不同，则输出cin.good()为0。</li><li>所以先用cin.good()检验你的输入类型是否相同</li></ul></li><li><p>cin.clear()</p><ul><li>cin.clear(),用于修复输入流，使得你得输入能重新进行</li></ul></li><li><p>cin.ignore(streamsize num=1, int delim=EOF)</p><ul><li>跳过输入流中n个字符，或在遇到指定的终止字符时提前结束（此时跳过包括终止字符在内的若干字符）。</li><li>例如cin.ignore(1,’\n’)，跳过一个1个字节，或者遇到回车时结束。</li></ul></li><li><p>实例：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs cpp">cin &gt;&gt; x;<br><span class="hljs-keyword">if</span> (!cin.<span class="hljs-built_in">good</span>()) &#123;<br>cin.<span class="hljs-built_in">clear</span>();<br>cin.<span class="hljs-built_in">ignore</span>(<span class="hljs-number">4</span>, <span class="hljs-string">&#x27;\n&#x27;</span>);<br>cout &lt;&lt; <span class="hljs-string">&quot;输入不规范，请输入1-1000的整数&quot;</span> &lt;&lt; endl;<br>&#125;<br></code></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>c++相关知识</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>c++</tag>
+      
+      <tag>笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>cpp_虚函数和多态</title>
     <link href="/boker.github.io/2022/04/07/cpp/cpp-%E8%99%9A%E5%87%BD%E6%95%B0%E5%92%8C%E5%A4%9A%E6%80%81/"/>
     <url>/boker.github.io/2022/04/07/cpp/cpp-%E8%99%9A%E5%87%BD%E6%95%B0%E5%92%8C%E5%A4%9A%E6%80%81/</url>
@@ -20,9 +47,9 @@
     
     <tags>
       
-      <tag>笔记</tag>
-      
       <tag>c++</tag>
+      
+      <tag>笔记</tag>
       
     </tags>
     
@@ -47,9 +74,9 @@
     
     <tags>
       
-      <tag>笔记</tag>
-      
       <tag>c++</tag>
+      
+      <tag>笔记</tag>
       
     </tags>
     
@@ -74,9 +101,9 @@
     
     <tags>
       
-      <tag>笔记</tag>
-      
       <tag>c++</tag>
+      
+      <tag>笔记</tag>
       
     </tags>
     
@@ -101,9 +128,9 @@
     
     <tags>
       
-      <tag>笔记</tag>
-      
       <tag>c++</tag>
+      
+      <tag>笔记</tag>
       
     </tags>
     
@@ -184,9 +211,9 @@
     
     <tags>
       
-      <tag>教程</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>教程</tag>
       
     </tags>
     
