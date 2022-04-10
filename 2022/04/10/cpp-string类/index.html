@@ -16,28 +16,22 @@
   <meta name="author" content="ZZZty">
   <meta name="keywords" content="">
   
-    <meta name="description" content="此文记录了我第一次通过hexo框架搭建博客的一些心得，介绍了Hexo博客的搭建方法和一些使用方法，会持续在这里更新一些新学到的hexo使用方法。">
+    <meta name="description" content="可以用来查看string类的使用方法和功能。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo博客搭建">
-<meta property="og:url" content="https://sokachzz.github.io/boker.github.io/2022/04/03/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:title" content="cpp_string类">
+<meta property="og:url" content="https://sokachzz.github.io/boker.github.io/2022/04/10/cpp-string%E7%B1%BB/index.html">
 <meta property="og:site_name" content="sokach_zzz">
-<meta property="og:description" content="此文记录了我第一次通过hexo框架搭建博客的一些心得，介绍了Hexo博客的搭建方法和一些使用方法，会持续在这里更新一些新学到的hexo使用方法。">
+<meta property="og:description" content="可以用来查看string类的使用方法和功能。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://sokachzz.github.io/boker.github.io/2022/04/03/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/1.png">
-<meta property="og:image" content="https://sokachzz.github.io/boker.github.io/2022/04/03/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/2.png">
-<meta property="og:image" content="https://sokachzz.github.io/boker.github.io/2022/04/03/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/3.png">
-<meta property="og:image" content="https://sokachzz.github.io/boker.github.io/2022/04/03/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/4.png">
-<meta property="og:image" content="https://sokachzz.github.io/boker.github.io/2022/04/03/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/5.png">
-<meta property="article:published_time" content="2022-04-03T02:47:09.000Z">
-<meta property="article:modified_time" content="2022-04-03T09:47:04.242Z">
+<meta property="article:published_time" content="2022-04-10T08:44:15.000Z">
+<meta property="article:modified_time" content="2022-04-10T13:17:24.853Z">
 <meta property="article:author" content="ZZZty">
-<meta property="article:tag" content="教程">
 <meta property="article:tag" content="笔记">
+<meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://sokachzz.github.io/boker.github.io/2022/04/03/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/1.png">
   
   
-  <title>Hexo博客搭建 - sokach_zzz</title>
+  <title>cpp_string类 - sokach_zzz</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -194,7 +188,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hexo博客搭建"></span>
+            <span id="subtitle" data-typed-text="cpp_string类"></span>
           
         </div>
 
@@ -205,8 +199,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-04-03 10:47" pubdate>
-          2022年4月3日 上午
+        <time datetime="2022-04-10 16:44" pubdate>
+          2022年4月10日 下午
         </time>
       </span>
     
@@ -217,7 +211,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.4k 字
+          2k 字
         
       </span>
     
@@ -228,7 +222,7 @@
         
         
         
-          21 分钟
+          17 分钟
         
       </span>
     
@@ -266,105 +260,167 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hexo博客搭建</h1>
+            <h1 style="display: none">cpp_string类</h1>
             
             <div class="markdown-body">
               
-              <p>此文记录了我第一次通过hexo框架搭建博客的一些心得，介绍了Hexo博客的搭建方法和一些使用方法，会持续在这里更新一些新学到的hexo使用方法。</p>
+              <p>可以用来查看string类的使用方法和功能。</p>
 <span id="more"></span>
 
-<h3 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h3><p>安装node.js,Git</p>
-<p><a target="_blank" rel="noopener" href="https://nodejs.org/dist/v4.2.3/node-v4.2.3-x64.msi">https://nodejs.org/dist/v4.2.3/node-v4.2.3-x64.msi</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/git-for-windows/git/releases/download/v2.11.0.windows.3/Git-2.11.0.3-64-bit.exe">https://github.com/git-for-windows/git/releases/download/v2.11.0.windows.3/Git-2.11.0.3-64-bit.exe</a></p>
-<ul>
-<li><p>安装完成后，需要将git,node.js,npm都设置为环境变量，将三者的绝对路径复制到环境变量的设置中，具体操作可以百度。</p>
-</li>
-<li><p>设置完环境变量可以通过命令行中进行如下的输入来判断是否安装成功以及安装的版本信息。</p>
-</li>
+<h3 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h3><ul>
+<li><string></li>
 </ul>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs crmsh"><span class="hljs-keyword">node</span> <span class="hljs-title">-v</span><br>npm -v<br>git --<span class="hljs-keyword">version</span><br></code></pre></td></tr></table></figure>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function">string <span class="hljs-title">s1</span><span class="hljs-params">(<span class="hljs-string">&quot;hello&quot;</span>)</span></span>;<br>string month=<span class="hljs-string">&quot;March&quot;</span>;<br><span class="hljs-function">string <span class="hljs-title">s2</span><span class="hljs-params">(<span class="hljs-number">8</span>,<span class="hljs-string">&#x27;x&#x27;</span>)</span></span>;<span class="hljs-comment">//表示s2有连着8个x</span><br></code></pre></td></tr></table></figure>
 
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>​    在这里踩了很大的坑，一开始搜了很多教程，跟着网上的这些教程做的过程中报了很多错，可能与我git和node.js以前下载过，后来重新下载位置改变有关，在这里就卡了很久，后来发现在hexo的官方网站上有一些一键部署指令，很简洁并且一次就成功了。只需要在命令行中输入如下指令即可。</p>
-<ul>
-<li><p>初始化hexo基础配置文件</p>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm">npm install hexo-<span class="hljs-keyword">cli</span> -g<br></code></pre></td></tr></table></figure></li>
-<li><p>初始化hexo，并且建立在blog文件夹中</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp">hexo <span class="hljs-keyword">init</span> blog<br></code></pre></td></tr></table></figure></li>
-<li><p>进入到blog文件夹中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> blog<br></code></pre></td></tr></table></figure></li>
-<li><p>配置node</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">npm <span class="hljs-keyword">install</span><br></code></pre></td></tr></table></figure></li>
-<li><p>加载hexo基础html、css、js等文件</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs verilog">hexo <span class="hljs-keyword">generate</span>  <span class="hljs-comment">//hexo g</span><br></code></pre></td></tr></table></figure></li>
-<li><p>开启本地服务器</p>
-<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs axapta">hexo <span class="hljs-keyword">server</span><br></code></pre></td></tr></table></figure></li>
-</ul>
-<p>​    输入完最后一条指令之后，hexo会开启一个本地服务器，并且会给你一个本地服务器的url，将这个url复制到你的浏览器中，可以看到hexo默认配置的静态网页，这时你的博客就可以算是在本地搭建完啦。</p>
-<h3 id="hexo文件"><a href="#hexo文件" class="headerlink" title="hexo文件"></a>hexo文件</h3><p><img src="1.png" srcset="/boker.github.io/img/loading.gif" lazyload alt="1"></p>
-<p>主要会用到以下三个文件</p>
-<ul>
-<li>config.yml<ul>
-<li>用于修改网站配置，配置设定，网站的标题，网址等。</li>
-<li>可以搜索官方文档具体使用。</li>
-</ul>
-</li>
-<li>source 资源<ul>
-<li>用于存放原始资源的地方，自己上传的图片，markdown文章等。</li>
-<li>其中_posts文件夹中存放的是那些要上传到网站上的资源。</li>
-</ul>
-</li>
-<li>themes 主题<ul>
-<li>用来存放主题的文件夹。</li>
-<li>会根据主题解析source文件夹中的档案来生成静态页面。预设主题为landscape。</li>
-</ul>
-</li>
-</ul>
-<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>​    在hexo官网中你可以找到很多博客主题，我选择的是fluid主题。点击图片可以进行预览，点击标题就会进入下载界面，将下载下来的压缩包解压到先前提到的themes主题文件夹中，一般下载的主题都会有专门的用户文档描述使用方法，可以在主题存放的github仓库的readme 文档中找到，解压下来的文件夹需要重命名为主题名。</p>
-<h4 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h4><p>设置主题是在hexo根目录下的config.yml文件中，修改themes属性。例如：</p>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">theme:</span> fluid<br></code></pre></td></tr></table></figure>
+<p>不可以用单个字符初始化，不可以用数字初始化。可以将字符赋值给string对象。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp">string s; <br>s = <span class="hljs-string">&#x27;n&#x27;</span>;<br></code></pre></td></tr></table></figure>
 
-<h4 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h4><p>​    你可以自主修改主题中的很多配置，在主题对应的用户文档中都会有详细的使用说明，修改主题主要是在你主题文件夹下的config.yml文件里。需要注意的是，该config.yml文件与根目录中的config.yml文件是不同的，这个文件是用来配置主题相关属性的，对于二者重叠的属性修改，主题文件夹下的config.yml具有更高的优先级。</p>
-<h3 id="部署到GitHub"><a href="#部署到GitHub" class="headerlink" title="部署到GitHub"></a>部署到GitHub</h3><h4 id="建立GitHub仓库"><a href="#建立GitHub仓库" class="headerlink" title="建立GitHub仓库"></a>建立GitHub仓库</h4><p>Step1.注册GitHub账号并登录</p>
-<ul>
-<li>需要注意的是，GitHub作为国外网站，在国内登录时会出现加载很慢或者直接无法进入网站的情况。</li>
-<li>我是通过挂梯子解决这个问题的，网上可以搜到一些教程修改本地设置也可以成功登录，我试过没成功，就再没试过了。</li>
+<h3 id="求string长度"><a href="#求string长度" class="headerlink" title="求string长度"></a>求string长度</h3><ul>
+<li>string.length();</li>
 </ul>
-<p>Step2.点击New新建一个github仓库</p>
-<p><img src="2.png" srcset="/boker.github.io/img/loading.gif" lazyload alt="2"></p>
-<p>step3.进入到你的github仓库中，点击settings-&gt;pages，在Source里将branch设置为main，然后点击save，可以看到上方的绿色框中会生成一个url网址，这就是你未来的博客网址了。</p>
-<p><img src="3.png" srcset="/boker.github.io/img/loading.gif" lazyload alt="3"></p>
-<h4 id="将内容上传到GitHub"><a href="#将内容上传到GitHub" class="headerlink" title="将内容上传到GitHub"></a>将内容上传到GitHub</h4><p>Step1.安装Git相关套件</p>
-<p>这一步需要回到hexo根目录中，在终端命令行中输入以下命令</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">npm install hexo-deployer-git <span class="hljs-comment">--save</span><br></code></pre></td></tr></table></figure>
+<h3 id="输入直接到字符串"><a href="#输入直接到字符串" class="headerlink" title="输入直接到字符串"></a>输入直接到字符串</h3><ul>
+<li>string支持流读取运算符</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp">string stringObject;<br>cin &gt;&gt; stringObject;<br></code></pre></td></tr></table></figure>
 
-<p>Step2.修改_config.yml文件的deployment设置</p>
-<p>需要主要的是这里的_config.yml指的是根目录中的文件</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">deploy:</span><br><span class="hljs-symbol">	type:</span> git<br><span class="hljs-symbol">	repository:</span> git@github.com:username/username.github.io.git<br><span class="hljs-symbol">	branch:</span> main<br></code></pre></td></tr></table></figure>
-
-<p>​    这一步可以说是我踩过最大的坑了，这里的repository使用的url应当是ssh形式的，如下图所示，并且，这里的url不能直接复制，使用github的ssh需要本地有对应的ssh密钥，应当先设置一个自己的ssh密钥，然后才能上传自己的内容到github中。</p>
-<p><img src="4.png" srcset="/boker.github.io/img/loading.gif" lazyload alt="4"></p>
 <ul>
-<li><p>github的ssh密钥的设置</p>
+<li><p>string支持getline函数,函数声明：</p>
+<p>1.istream&amp; getline(istream&amp; is, string&amp; str,chardelim)</p>
+<p>2.istream&amp; getline(istream&amp; is, string&amp; str)</p>
 <ul>
-<li><p>在命令行中输入如下指令，会在你的电脑本地生成一个rsa文件，这个rsa文件用于生成自己的ssh密钥.</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs excel">ssh-keygen -<span class="hljs-built_in">t</span> rsa -C <span class="hljs-string">&quot;youremail@example.com&quot;</span><br></code></pre></td></tr></table></figure></li>
-<li><p>你只需要把里面的邮箱地址换成你自己的邮箱地址即可.</p>
-</li>
-<li><p>然后共有三次输入，第一次为你rsa文件的名字，二三次是密码的设置.</p>
-</li>
-<li><p>然后在C-user-.ssh文件夹中，可以找到一个rea.pub文件,打开文件复制里面的内容.</p>
-</li>
-<li><p>右上角点击头像-&gt;settings-&gt;SSH and GPG key-&gt;new key生成一个自己的ssh密钥.</p>
-<p><img src="5.png" srcset="/boker.github.io/img/loading.gif" lazyload alt="5"></p>
-</li>
+<li>这里的chardelim是截至终止符，默认是回车。</li>
 </ul>
 </li>
 </ul>
-<p>Step3.输入部署指令</p>
-<p>这三条指令在你每次修改完博客要重新上传文件时，都需要使用。</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs verilog">hexo clean  <span class="hljs-comment">//hexo cl</span><br>hexo <span class="hljs-keyword">generate</span>  <span class="hljs-comment">// hexo g</span><br>hexo deploy  <span class="hljs-comment">// hexo d</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp">string s;<br><span class="hljs-built_in">getline</span>(cin,s);<br></code></pre></td></tr></table></figure>
 
-<p>这样,你的hexo博客部署就已经完成啦,将github仓库中生成的你的url输入浏览器中,你就可以看到自己的博客啦!</p>
+<h3 id="string的赋值"><a href="#string的赋值" class="headerlink" title="string的赋值"></a>string的赋值</h3><ul>
+<li><p>用 = 赋值</p>
+</li>
+<li><p>用assign成员函数复制</p>
+<ul>
+<li>这里的assign函数可以实现部分复制</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function">string <span class="hljs-title">s1</span><span class="hljs-params">(<span class="hljs-string">&quot;catpig&quot;</span>)</span>,s3</span>;<br>s3.(<span class="hljs-built_in">assign</span>(s1,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>));<br><span class="hljs-comment">//从s1下标为1的字符开始复制3个字符给s3</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="string单个字符访问"><a href="#string单个字符访问" class="headerlink" title="string单个字符访问"></a>string单个字符访问</h3><ul>
+<li>用下标运算符[]访问</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">s2[<span class="hljs-number">5</span>]=s1[<span class="hljs-number">3</span>]=<span class="hljs-string">&#x27;a&#x27;</span>;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>成员函数at<ul>
+<li>成员函数at会做范围检查，超出范围会抛出out_of_range异常。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs //cpp">string s1(&quot;hello&quot;);<br>for(int i=0;i&lt;s1.length(),i++)<br>    cout&lt;&lt;s1.at(i)&lt;&lt;endl;<br></code></pre></td></tr></table></figure>
+
+<h3 id="string的连接"><a href="#string的连接" class="headerlink" title="string的连接"></a>string的连接</h3><ul>
+<li>用 + 运算符连接字符串</li>
+<li>用 += 运算符连接字符串</li>
+<li>用成员函数append连接字符串<ul>
+<li>可以从下标为x的位置开始，选择s1.size()个字符连接。</li>
+</ul>
+</li>
+</ul>
+<h3 id="比较string-字典序"><a href="#比较string-字典序" class="headerlink" title="比较string(字典序)"></a>比较string(字典序)</h3><ul>
+<li><p>用关系运算符比较string大小，返回值为bool类型</p>
+</li>
+<li><p>用成员函数compare比较string大小</p>
+<ul>
+<li>可以比较两个字符串中间某一段的大小</li>
+</ul>
+</li>
+</ul>
+<h3 id="取得字串"><a href="#取得字串" class="headerlink" title="取得字串"></a>取得字串</h3><ul>
+<li>成员函数 substr()</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp">s2 = s1.<span class="hljs-built_in">substr</span>(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>);<br><span class="hljs-comment">//从下标4开始的5个字符</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="交换字符串"><a href="#交换字符串" class="headerlink" title="交换字符串"></a>交换字符串</h3><ul>
+<li>成员函数 swap()</li>
+</ul>
+<h3 id="找string中的字符-串"><a href="#找string中的字符-串" class="headerlink" title="找string中的字符(串)"></a>找string中的字符(串)</h3><ul>
+<li>成员函数find()<ul>
+<li>在s1中从前向后找”lo”第一次出现的位置，找到返回l所在位置下标。找不到返回string::npos。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function">string <span class="hljs-title">s1</span><span class="hljs-params">(<span class="hljs-string">&quot;hello world&quot;</span>)</span></span>;<br>s1.<span class="hljs-built_in">find</span>(<span class="hljs-string">&quot;lo&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>还可以从下标为x的位置查找字符串</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp">s1.<span class="hljs-built_in">find</span>(<span class="hljs-string">&quot;ll&quot;</span>,<span class="hljs-number">1</span>)<br><span class="hljs-comment">//从下标为1的地方开始找</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>成员函数rfind()<ul>
+<li>在s1中从后向前找字符的位置。</li>
+</ul>
+</li>
+<li>成员函数find_first_of()<ul>
+<li>在s1中从前向后找abcd中任何一个字符第一次出现的地方</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">s1.<span class="hljs-built_in">find_first_of</span>(<span class="hljs-string">&quot;abcd&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>成员函数find_last_of()<ul>
+<li>在s1中查找abcd中任何一个字符最后一次出现的地方。</li>
+</ul>
+</li>
+<li>成员函数find_first_not_of()<ul>
+<li>s1中不在abcd中的字母第一次出现的地方</li>
+</ul>
+</li>
+<li>成员函数find_last_not_of()<ul>
+<li>s1中不在abcd中的字母最后一次出现的地方</li>
+</ul>
+</li>
+</ul>
+<h3 id="删除string中的字符"><a href="#删除string中的字符" class="headerlink" title="删除string中的字符"></a>删除string中的字符</h3><ul>
+<li>成员函数erase(x)<ul>
+<li>去掉下标x及之后的字符</li>
+</ul>
+</li>
+</ul>
+<h3 id="替换string中的字符"><a href="#替换string中的字符" class="headerlink" title="替换string中的字符"></a>替换string中的字符</h3><ul>
+<li>成员函数replace(n,m,”abcd”)<ul>
+<li>将s1中下标n开始的m个字符换成”abcd”</li>
+</ul>
+</li>
+</ul>
+<h3 id="插入字符"><a href="#插入字符" class="headerlink" title="插入字符"></a>插入字符</h3><ul>
+<li>成员函数insert()</li>
+</ul>
+<h3 id="转换成char-字符串"><a href="#转换成char-字符串" class="headerlink" title="转换成char*字符串"></a>转换成char*字符串</h3><ul>
+<li>成员函数c_str()<ul>
+<li>返回值为const char*，以’\0’结尾</li>
+</ul>
+</li>
+<li>成员函数data（）<ul>
+<li>返回值为char*</li>
+</ul>
+</li>
+</ul>
+<h3 id="字符串拷贝"><a href="#字符串拷贝" class="headerlink" title="字符串拷贝"></a>字符串拷贝</h3><ul>
+<li>成员函数copy()<ul>
+<li>可以部分拷贝字符串</li>
+</ul>
+</li>
+</ul>
+<h3 id="从string进行输入输出"><a href="#从string进行输入输出" class="headerlink" title="从string进行输入输出"></a>从string进行输入输出</h3><ul>
+<li>字符串流处理</li>
+<li>用istringstram和ostringstram进行字符串上的输入输出</li>
+</ul>
+<p>字符串输入流istringstram</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function">string <span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-string">&quot;hello world 123 3.5 A&quot;</span>)</span></span>;<br><span class="hljs-function">istreamstream <span class="hljs-title">inputString</span><span class="hljs-params">(input)</span></span>;<br>inputString &gt;&gt; string1 &gt;&gt; string2 &gt;&gt; i &gt;&gt; d &gt;&gt; c;<br></code></pre></td></tr></table></figure>
+
+<p>字符串输出流ostringstram</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp">istreamstream outputString;<br>outputString&lt;&lt;<span class="hljs-string">&quot;this &quot;</span> &lt;&lt; a &lt;&lt;<span class="hljs-string">&quot;ok &quot;</span>&lt;&lt; endl;<br>cout &lt;&lt; outputString.<span class="hljs-built_in">str</span>()<span class="hljs-comment">//这里的返回值是string类型</span><br></code></pre></td></tr></table></figure>
+
 
               
             </div>
@@ -382,7 +438,7 @@
     
       <span class="category-chain">
         
-  <a href="/boker.github.io/categories/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="category-chain-item">Hexo博客搭建</a>
+  <a href="/boker.github.io/categories/c-%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/" class="category-chain-item">c++相关知识</a>
   
   
 
@@ -397,9 +453,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/boker.github.io/tags/%E6%95%99%E7%A8%8B/">#教程</a>
-      
         <a href="/boker.github.io/tags/%E7%AC%94%E8%AE%B0/">#笔记</a>
+      
+        <a href="/boker.github.io/tags/c/">#c++</a>
       
     </div>
   
@@ -411,8 +467,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hexo博客搭建</div>
-      <div>https://sokachzz.github.io/boker.github.io/2022/04/03/Hexo博客搭建/</div>
+      <div>cpp_string类</div>
+      <div>https://sokachzz.github.io/boker.github.io/2022/04/10/cpp-string类/</div>
     </div>
     <div class="license-meta">
       
@@ -424,7 +480,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年4月3日</div>
+          <div>2022年4月10日</div>
         </div>
       
       
@@ -454,18 +510,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/boker.github.io/2022/04/03/python/python_%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9/" title="python_基础内容">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">python_基础内容</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/boker.github.io/2022/04/01/python/python_library/" title="python_library">
-                        <span class="hidden-mobile">python_library</span>
+                      <a href="/boker.github.io/2022/04/09/cpp/cpp-I-O%E6%B5%81/" title="cpp_I/O流">
+                        <span class="hidden-mobile">cpp_I/O流</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
