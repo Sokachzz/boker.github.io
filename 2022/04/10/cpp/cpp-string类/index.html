@@ -16,20 +16,22 @@
   <meta name="author" content="ZZZty">
   <meta name="keywords" content="">
   
-    <meta name="description" content="数据计算NumPy数组的概念Pandas">
+    <meta name="description" content="可以用来查看string类的使用方法和功能。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sokach_zzz">
-<meta property="og:url" content="https://sokachzz.github.io/boker.github.io/2022/12/09/python/python_%E6%95%B0%E6%8D%AE%E8%AE%A1%E7%AE%97/index.html">
+<meta property="og:title" content="cpp_string类">
+<meta property="og:url" content="https://sokachzz.github.io/boker.github.io/2022/04/10/cpp/cpp-string%E7%B1%BB/index.html">
 <meta property="og:site_name" content="sokach_zzz">
-<meta property="og:description" content="数据计算NumPy数组的概念Pandas">
+<meta property="og:description" content="可以用来查看string类的使用方法和功能。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-12-09T07:00:17.948Z">
-<meta property="article:modified_time" content="2022-12-10T06:28:56.525Z">
+<meta property="article:published_time" content="2022-04-10T08:44:15.000Z">
+<meta property="article:modified_time" content="2022-04-10T13:17:24.853Z">
 <meta property="article:author" content="ZZZty">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>sokach_zzz</title>
+  <title>cpp_string类 - sokach_zzz</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -186,7 +188,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="cpp_string类"></span>
           
         </div>
 
@@ -197,8 +199,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-12-09 15:00" pubdate>
-          2022年12月9日 下午
+        <time datetime="2022-04-10 16:44" pubdate>
+          2022年4月10日 下午
         </time>
       </span>
     
@@ -209,7 +211,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          20 字
+          2k 字
         
       </span>
     
@@ -220,7 +222,7 @@
         
         
         
-          1 分钟
+          17 分钟
         
       </span>
     
@@ -258,17 +260,204 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">cpp_string类</h1>
             
             <div class="markdown-body">
               
-              <h1 id="数据计算"><a href="#数据计算" class="headerlink" title="数据计算"></a>数据计算</h1><h2 id="NumPy"><a href="#NumPy" class="headerlink" title="NumPy"></a>NumPy</h2><h3 id="数组的概念"><a href="#数组的概念" class="headerlink" title="数组的概念"></a>数组的概念</h3><h2 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h2>
+              <p>可以用来查看string类的使用方法和功能。</p>
+<span id="more"></span>
+
+<h3 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h3><ul>
+<li><string></string></li>
+</ul>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function">string <span class="hljs-title">s1</span><span class="hljs-params">(<span class="hljs-string">&quot;hello&quot;</span>)</span></span>;<br>string month=<span class="hljs-string">&quot;March&quot;</span>;<br><span class="hljs-function">string <span class="hljs-title">s2</span><span class="hljs-params">(<span class="hljs-number">8</span>,<span class="hljs-string">&#x27;x&#x27;</span>)</span></span>;<span class="hljs-comment">//表示s2有连着8个x</span><br></code></pre></td></tr></table></figure>
+
+<p>不可以用单个字符初始化，不可以用数字初始化。可以将字符赋值给string对象。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp">string s; <br>s = <span class="hljs-string">&#x27;n&#x27;</span>;<br></code></pre></td></tr></table></figure>
+
+<h3 id="求string长度"><a href="#求string长度" class="headerlink" title="求string长度"></a>求string长度</h3><ul>
+<li>string.length();</li>
+</ul>
+<h3 id="输入直接到字符串"><a href="#输入直接到字符串" class="headerlink" title="输入直接到字符串"></a>输入直接到字符串</h3><ul>
+<li>string支持流读取运算符</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp">string stringObject;<br>cin &gt;&gt; stringObject;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><p>string支持getline函数,函数声明：</p>
+<p>1.istream&amp; getline(istream&amp; is, string&amp; str,chardelim)</p>
+<p>2.istream&amp; getline(istream&amp; is, string&amp; str)</p>
+<ul>
+<li>这里的chardelim是截至终止符，默认是回车。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp">string s;<br><span class="hljs-built_in">getline</span>(cin,s);<br></code></pre></td></tr></table></figure>
+
+<h3 id="string的赋值"><a href="#string的赋值" class="headerlink" title="string的赋值"></a>string的赋值</h3><ul>
+<li><p>用 = 赋值</p>
+</li>
+<li><p>用assign成员函数复制</p>
+<ul>
+<li>这里的assign函数可以实现部分复制</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function">string <span class="hljs-title">s1</span><span class="hljs-params">(<span class="hljs-string">&quot;catpig&quot;</span>)</span>,s3</span>;<br>s3.(<span class="hljs-built_in">assign</span>(s1,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>));<br><span class="hljs-comment">//从s1下标为1的字符开始复制3个字符给s3</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="string单个字符访问"><a href="#string单个字符访问" class="headerlink" title="string单个字符访问"></a>string单个字符访问</h3><ul>
+<li>用下标运算符[]访问</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">s2[<span class="hljs-number">5</span>]=s1[<span class="hljs-number">3</span>]=<span class="hljs-string">&#x27;a&#x27;</span>;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>成员函数at<ul>
+<li>成员函数at会做范围检查，超出范围会抛出out_of_range异常。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs //cpp">string s1(&quot;hello&quot;);<br>for(int i=0;i&lt;s1.length(),i++)<br>    cout&lt;&lt;s1.at(i)&lt;&lt;endl;<br></code></pre></td></tr></table></figure>
+
+<h3 id="string的连接"><a href="#string的连接" class="headerlink" title="string的连接"></a>string的连接</h3><ul>
+<li>用 + 运算符连接字符串</li>
+<li>用 += 运算符连接字符串</li>
+<li>用成员函数append连接字符串<ul>
+<li>可以从下标为x的位置开始，选择s1.size()个字符连接。</li>
+</ul>
+</li>
+</ul>
+<h3 id="比较string-字典序"><a href="#比较string-字典序" class="headerlink" title="比较string(字典序)"></a>比较string(字典序)</h3><ul>
+<li><p>用关系运算符比较string大小，返回值为bool类型</p>
+</li>
+<li><p>用成员函数compare比较string大小</p>
+<ul>
+<li>可以比较两个字符串中间某一段的大小</li>
+</ul>
+</li>
+</ul>
+<h3 id="取得字串"><a href="#取得字串" class="headerlink" title="取得字串"></a>取得字串</h3><ul>
+<li>成员函数 substr()</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp">s2 = s1.<span class="hljs-built_in">substr</span>(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>);<br><span class="hljs-comment">//从下标4开始的5个字符</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="交换字符串"><a href="#交换字符串" class="headerlink" title="交换字符串"></a>交换字符串</h3><ul>
+<li>成员函数 swap()</li>
+</ul>
+<h3 id="找string中的字符-串"><a href="#找string中的字符-串" class="headerlink" title="找string中的字符(串)"></a>找string中的字符(串)</h3><ul>
+<li>成员函数find()<ul>
+<li>在s1中从前向后找”lo”第一次出现的位置，找到返回l所在位置下标。找不到返回string::npos。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function">string <span class="hljs-title">s1</span><span class="hljs-params">(<span class="hljs-string">&quot;hello world&quot;</span>)</span></span>;<br>s1.<span class="hljs-built_in">find</span>(<span class="hljs-string">&quot;lo&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>还可以从下标为x的位置查找字符串</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp">s1.<span class="hljs-built_in">find</span>(<span class="hljs-string">&quot;ll&quot;</span>,<span class="hljs-number">1</span>)<br><span class="hljs-comment">//从下标为1的地方开始找</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>成员函数rfind()<ul>
+<li>在s1中从后向前找字符的位置。</li>
+</ul>
+</li>
+<li>成员函数find_first_of()<ul>
+<li>在s1中从前向后找abcd中任何一个字符第一次出现的地方</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">s1.<span class="hljs-built_in">find_first_of</span>(<span class="hljs-string">&quot;abcd&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>成员函数find_last_of()<ul>
+<li>在s1中查找abcd中任何一个字符最后一次出现的地方。</li>
+</ul>
+</li>
+<li>成员函数find_first_not_of()<ul>
+<li>s1中不在abcd中的字母第一次出现的地方</li>
+</ul>
+</li>
+<li>成员函数find_last_not_of()<ul>
+<li>s1中不在abcd中的字母最后一次出现的地方</li>
+</ul>
+</li>
+</ul>
+<h3 id="删除string中的字符"><a href="#删除string中的字符" class="headerlink" title="删除string中的字符"></a>删除string中的字符</h3><ul>
+<li>成员函数erase(x)<ul>
+<li>去掉下标x及之后的字符</li>
+</ul>
+</li>
+</ul>
+<h3 id="替换string中的字符"><a href="#替换string中的字符" class="headerlink" title="替换string中的字符"></a>替换string中的字符</h3><ul>
+<li>成员函数replace(n,m,”abcd”)<ul>
+<li>将s1中下标n开始的m个字符换成”abcd”</li>
+</ul>
+</li>
+</ul>
+<h3 id="插入字符"><a href="#插入字符" class="headerlink" title="插入字符"></a>插入字符</h3><ul>
+<li>成员函数insert()</li>
+</ul>
+<h3 id="转换成char-字符串"><a href="#转换成char-字符串" class="headerlink" title="转换成char*字符串"></a>转换成char*字符串</h3><ul>
+<li>成员函数c_str()<ul>
+<li>返回值为const char*，以’\0’结尾</li>
+</ul>
+</li>
+<li>成员函数data（）<ul>
+<li>返回值为char*</li>
+</ul>
+</li>
+</ul>
+<h3 id="字符串拷贝"><a href="#字符串拷贝" class="headerlink" title="字符串拷贝"></a>字符串拷贝</h3><ul>
+<li>成员函数copy()<ul>
+<li>可以部分拷贝字符串</li>
+</ul>
+</li>
+</ul>
+<h3 id="从string进行输入输出"><a href="#从string进行输入输出" class="headerlink" title="从string进行输入输出"></a>从string进行输入输出</h3><ul>
+<li>字符串流处理</li>
+<li>用istringstram和ostringstram进行字符串上的输入输出</li>
+</ul>
+<p>字符串输入流istringstram</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function">string <span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-string">&quot;hello world 123 3.5 A&quot;</span>)</span></span>;<br><span class="hljs-function">istreamstream <span class="hljs-title">inputString</span><span class="hljs-params">(input)</span></span>;<br>inputString &gt;&gt; string1 &gt;&gt; string2 &gt;&gt; i &gt;&gt; d &gt;&gt; c;<br></code></pre></td></tr></table></figure>
+
+<p>字符串输出流ostringstram</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp">istreamstream outputString;<br>outputString&lt;&lt;<span class="hljs-string">&quot;this &quot;</span> &lt;&lt; a &lt;&lt;<span class="hljs-string">&quot;ok &quot;</span>&lt;&lt; endl;<br>cout &lt;&lt; outputString.<span class="hljs-built_in">str</span>()<span class="hljs-comment">//这里的返回值是string类型</span><br></code></pre></td></tr></table></figure>
+
+
               
             </div>
             <hr/>
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/boker.github.io/categories/c-%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/" class="category-chain-item">c++相关知识</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/boker.github.io/tags/%E7%AC%94%E8%AE%B0/">#笔记</a>
+      
+        <a href="/boker.github.io/tags/c/">#c++</a>
+      
+    </div>
   
 </div>
 
@@ -278,8 +467,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>https://sokachzz.github.io/boker.github.io/2022/12/09/python/python_数据计算/</div>
+      <div>cpp_string类</div>
+      <div>https://sokachzz.github.io/boker.github.io/2022/04/10/cpp/cpp-string类/</div>
     </div>
     <div class="license-meta">
       
@@ -291,7 +480,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年12月9日</div>
+          <div>2022年4月10日</div>
         </div>
       
       
@@ -321,18 +510,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/boker.github.io/2024/02/01/new/" title="new">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">new</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/boker.github.io/2022/04/10/cpp-string%E7%B1%BB/" title="cpp_string类">
-                        <span class="hidden-mobile">cpp_string类</span>
+                      <a href="/boker.github.io/2022/04/09/cpp/cpp-I-O%E6%B5%81/" title="cpp_I/O流">
+                        <span class="hidden-mobile">cpp_I/O流</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
